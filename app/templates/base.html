@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Домашнее задание №23  
+        1. Выведите навбар, футер, main, base, title – в отдельные блоки, которые 
+затем можно редактировать в одном месте, а изменения будут происходить 
+везде. -->
+    <nav>
+        <ul style="list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            <a href="{% url 'log_out' %}">
+                <li>Log out</li>
+            </a>
+            <a href="{% url 'login' %}">
+                <li>Login</li>
+            </a>
+            <a href="{% url 'sign_up' %}">
+                <li>Sign Up</li>
+            </a>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
